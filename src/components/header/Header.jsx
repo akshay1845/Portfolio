@@ -7,7 +7,7 @@ function Header({menuOpen, setMenuOpen}) {
     <div className={"header "+ (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo">AKSHAY</a>
+          <a href="#intro" className="logo">DARSHAK</a>
 
           <div className="itemContainer">
           <Person className="icon" />
@@ -17,7 +17,7 @@ function Header({menuOpen, setMenuOpen}) {
            
           <div className="itemContainer">
           <Mail className="icon" />
-          <span>virat@gmail.com</span> 
+          <span>darshak@gmail.com</span> 
           </div>
 
         </div>
