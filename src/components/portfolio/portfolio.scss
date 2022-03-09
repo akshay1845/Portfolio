@@ -6,8 +6,16 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile{
+
+    }
+
     h1{
         font-size: 50px;
+
+        @include mobile{
+            font-size: 35px;
+        }
     }
 
     ul{
@@ -15,10 +23,17 @@
         padding: 0;
         list-style: none;
         display: flex;
+        
+
+        @include mobile{
+
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
     }
 
     .container{
-        width: 80%;
+        width: auto;
         height: 80%;
         display: flex;
         align-items: center;
@@ -26,10 +41,10 @@
         flex-wrap: wrap;
 
         .item{
-            width: 20%;
+            width: auto;
             height: 40%;
             border-radius: 20px;
-             margin: 20px 50px;
+            margin: 20px 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -38,9 +53,17 @@
             transition: all 0.5s ease;
             cursor: pointer;
 
+            @include mobile{
+                
+            }
+
             h3{
                 position: absolute;
                 font-style: 30px; 
+
+                @include mobile{
+                    font-size: 20px;
+                }
             }
             
             img{
@@ -48,6 +71,7 @@
                 height: 100%;
                 object-fit: cover;
                 z-index: 1;
+
             }
             &:hover{
                 background-color: $mainColor;

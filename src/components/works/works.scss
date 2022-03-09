@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .works{
     background-color: crimson;
     display: flex;
@@ -10,13 +12,25 @@
         position: absolute;
         cursor: pointer; 
 
+        @include mobile{
+            height: 50px;
+        }
+
         &.left{
             left:100px;
             transform:rotate(180deg);
+
+            @include mobile{
+                left:0;
+            }
         }
 
         &.right{
             right:100px;
+
+            @include mobile{
+                right:0;
+            }
         }
     }
 
@@ -26,6 +40,8 @@
         position: absolute;
          left: 0;
          transition: all 1s ease-out; 
+
+        
  
          .container{
             width: 100vw;
@@ -42,6 +58,10 @@
                 align-items: center;
                 justify-content: center;
 
+                @include mobile{
+                    width:240px;
+                    height: 300px;
+                }
                 .left{
                     flex: 4;
                     height: 80%;
@@ -56,6 +76,10 @@
                         flex-direction: column;
                         justify-content: space-between;
 
+                        @include mobile{
+                           width:auto;
+                        }
+
                         .imgContainer{
                             width: 60px;
                             height: 60px;
@@ -65,15 +89,25 @@
                             align-items: center;
                             justify-content: center;
 
+                            
+
                             img{
                                  width: 30px;
                             }
                         }
                         h2{
                             font-size:20px;
+                            
+                            @include mobile{
+                                font-size:15px;
+                            }
                         }
                         p{
                             font-size: 15px;
+
+                            @include mobile{
+                                font-size:12px;
+                            }
                         }
                         span{
                             font-size : 15px;
@@ -94,6 +128,12 @@
                     img{
                         width: 450px;
                         transform: rotate(-10deg);
+
+                        @include mobile{
+                            width:auto;
+                        }
+
+
                     }
                 }
             }

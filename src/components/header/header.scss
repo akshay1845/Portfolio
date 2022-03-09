@@ -10,11 +10,16 @@
     z-index: 3;
     transition: all 1s ease;
 
+    @include mobile{
+        height: 50px;
+    }
+
     .wrapper {
         padding: 10px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
 
         .left{
             display: flex;
@@ -26,6 +31,10 @@
                 text-decoration: none;
                 color: inherit;
                 margin-right: 40px;
+
+                @include mobile{
+                    font-size: 22px;
+                }
             }
 
             .itemContainer{
@@ -42,6 +51,9 @@
                     font-size: 15px;
                     font-weight: 500;
                 }
+                @include mobile{
+                    display:none
+                }
             }
         }
         .right{
@@ -53,6 +65,11 @@
                 flex-direction: column; 
                 justify-content: space-between;
                 cursor: pointer;
+
+                @include mobile{
+                    width:30px;
+                    justify-content: none;
+                }
             }
             
             span{
@@ -61,6 +78,10 @@
                 background-color: $mainColor;
                 transform-origin: left ;
                 transition: all 2s ease;
+
+                @include mobile{
+                 
+                }
             }
         }
     }
