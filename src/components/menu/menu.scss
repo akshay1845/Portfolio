@@ -16,6 +16,7 @@
 
     @include mobile{
         width: 180px;
+        overflow: hidden;
     }
 
     &.active{

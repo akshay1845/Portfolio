@@ -16,6 +16,18 @@
         @include mobile{
             font-size: 35px;
         }
+
+        @include tablet{
+            overflow: hidden;
+        }
+
+        @include laptop{
+            overflow: hidden;
+        }
+
+        @include xlaptop{
+            overflow: hidden;
+        }
     }
 
     ul{
@@ -26,7 +38,21 @@
         
 
         @include mobile{
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
 
+        @include tablet{
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        @include laptop{
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        @include xlaptop{
             flex-wrap: wrap;
             overflow: hidden;
         }
@@ -39,6 +65,7 @@
         align-items: center;
         justify-content:center;
         flex-wrap: wrap;
+
 
         .item{
             width: auto;
@@ -53,7 +80,7 @@
             transition: all 0.5s ease;
             cursor: pointer;
 
-            @include mobile{
+            @include tablet{
                 
             }
 

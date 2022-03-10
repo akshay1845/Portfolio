@@ -1,75 +1,103 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
-.contact{
-    background-color: white;
+.contact {
+  min-height: 100vh;
+  background-color: lightcyan;
+  display: flex;
+
+  @include mobile {
+    height: calc(100vh - 50px);
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      width:100%;
+      height: 100%;
+
+      @include tablet{
+          width:100%;
+      }
+
+      @include laptop{
+        width:100%;
+    }
+    }
+  }
+  .right {
+    flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    @include mobile{
-        flex-direction: column;
+    @include mobile {
+      justify-content: space-between;
+      height: 355px;
     }
 
-    .left{
-        flex: 1;
+    h2 {
+      font-size: 40px;
+
+      @include mobile {
+        margin-top: 5px;
+        font-size: 35px;
         overflow: hidden;
-
-        img{
-            height: 100%;
-        }
+      }
     }
-    .right{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-        @include mobile{
-            flex-direction: column;
+    form {
+      min-width: 50%;
+      min-height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
+      padding-top: 15px;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+
+        @include mobile {
+          height: 30px;
         }
-        
+      }
 
-        h2{
-            font-size: 40px; 
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+
+        @include mobile {
+          height: 200px;
         }
+      }
 
-        form{
-            min-width: 50%;
-            min-height:60%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
 
-            input{
-                width: 300px;
-                height: 30px;
-                font-size:14px;
-            }
-
-            textarea{
-                width: 300px;
-                height: 200px;
-                font-size:14px;
-            }
-
-            button{
-                width: 150px;
-                height: 30px;
-                color: white;
-                background-color:crimson;
-                border: none;
-                border-radius:10px;
-                font-weight: 500;
-                cursor: pointer;
-
-                &:focus{
-                    outline:none
-                }
-            }
-            
-            span{
-                color:green;
-            }
+        &:focus {
+          outline: none;
         }
+      }
+      .margin {
+        margin-bottom: 15px;
+      }
+      span {
+        color: green;
+      }
     }
+  }
 }

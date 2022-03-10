@@ -7,3 +7,21 @@ $mainColor : #15023a;
         @content;
     }
 }
+
+@mixin tablet {
+    @media (min-width:751px) and (max-width:900px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width:901px) and (max-width:1100px) {
+        @content;
+    }
+}
+
+@mixin xlaptop {
+    @media (min-width:1101px) and (max-width:1500px) {
+        @content;
+    }
+}
